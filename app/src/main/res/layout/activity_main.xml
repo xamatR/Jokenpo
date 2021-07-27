@@ -16,11 +16,11 @@
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/progressBar2"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar2" />
+        app:layout_constraintStart_toStartOf="@+id/progressBarCpu"
+        app:layout_constraintTop_toBottomOf="@+id/progressBarCpu" />
 
     <ProgressBar
-        android:id="@+id/progressBar3"
+        android:id="@+id/progressBarPlayer"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -37,7 +37,7 @@
         app:layout_constraintTop_toBottomOf="@+id/pntsCpu2" />
 
     <ProgressBar
-        android:id="@+id/progressBar2"
+        android:id="@+id/progressBarCpu"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -78,38 +78,41 @@
         app:layout_constraintTop_toBottomOf="@+id/Titulo" />
 
     <Button
-        android:id="@+id/PedraButon"
+        android:id="@+id/PedraButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="ButtonPedraClick"
         android:text="Pedra"
-        app:layout_constraintBaseline_toBaselineOf="@+id/PapelButon"
-        app:layout_constraintEnd_toStartOf="@+id/PapelButon"
+        app:layout_constraintBaseline_toBaselineOf="@+id/PapelButton"
+        app:layout_constraintEnd_toStartOf="@+id/PapelButton"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/PapelButon"
+        android:id="@+id/PapelButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:onClick="ButtonPapelClick"
         android:text="PAPEL"
-        app:layout_constraintEnd_toStartOf="@+id/TesouraButon"
+        app:layout_constraintEnd_toStartOf="@+id/TesouraButton"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/PedraButon"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar3" />
+        app:layout_constraintStart_toEndOf="@+id/PedraButton"
+        app:layout_constraintTop_toBottomOf="@+id/progressBarPlayer" />
 
     <Button
-        android:id="@+id/TesouraButon"
+        android:id="@+id/TesouraButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="ButtonTesouraClick"
         android:text="TESOURA"
-        app:layout_constraintBaseline_toBaselineOf="@+id/PapelButon"
+        app:layout_constraintBaseline_toBaselineOf="@+id/PapelButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/PapelButon" />
+        app:layout_constraintStart_toEndOf="@+id/PapelButton" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/TextViewStatus"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -123,6 +126,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PapelButon" />
+        app:layout_constraintTop_toBottomOf="@+id/PapelButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
