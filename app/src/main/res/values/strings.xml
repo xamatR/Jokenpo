@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Jokenpo</string>
+    <string name="jogador">Jogador:</string>
+    <string name="pedra_papel_tesoura">Pedra papel Tesoura</string>
+    <string name="celular">Celular:</string>
+    <string name="pedra">Pedra</string>
+    <string name="papel">PAPEL</string>
+    <string name="tesoura">TESOURA</string>
+    <string name="escolha_uma_op_o">Escolha uma opção</string>
 </resources>
