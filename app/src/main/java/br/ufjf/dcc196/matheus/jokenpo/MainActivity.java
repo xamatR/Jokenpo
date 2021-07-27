@@ -92,6 +92,7 @@ public class MainActivity extends AppCompatActivity {
                 pontosCPU +=3;
                 Toast.makeText(this,"Você perdeu a rodada!", Toast.LENGTH_SHORT).show();
                 break;
+
         }
         atualizaStatus();
     }
