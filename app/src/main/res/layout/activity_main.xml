@@ -5,6 +5,7 @@
     android:id="@+id/size"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:clickable="false"
     tools:context=".MainActivity">
 
     <TextView
@@ -57,6 +58,7 @@
         android:id="@+id/Titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
         android:layout_marginLeft="14dp"
         android:text="@string/pedra_papel_tesoura"
         android:textSize="30sp"
@@ -65,8 +67,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.043"
-        android:layout_marginStart="14dp" />
+        app:layout_constraintVertical_bias="0.043" />
 
     <TextView
         android:id="@+id/PntsCpu"
@@ -82,8 +83,10 @@
         android:id="@+id/PedraButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:clickable="false"
         android:onClick="ButtonPedraClick"
         android:text="@string/pedra"
+        android:textSize="12sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/PapelButton"
         app:layout_constraintEnd_toStartOf="@+id/PapelButton"
         app:layout_constraintHorizontal_bias="0.5"
@@ -93,9 +96,11 @@
         android:id="@+id/PapelButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
+        android:clickable="false"
         android:onClick="ButtonPapelClick"
         android:text="@string/papel"
+        android:textSize="12sp"
         app:layout_constraintEnd_toStartOf="@+id/TesouraButton"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/PedraButton"
@@ -105,8 +110,10 @@
         android:id="@+id/TesouraButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:clickable="false"
         android:onClick="ButtonTesouraClick"
         android:text="@string/tesoura"
+        android:textSize="12sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/PapelButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -118,7 +125,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="75dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:gravity="center"
@@ -126,8 +133,36 @@
         android:text="@string/escolha_uma_op_o"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PapelButton" />
+
+    <Button
+        android:id="@+id/buttonLagarto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:onClick="ButtonLagartoClick"
+        android:text="@string/lagarto"
+        android:textSize="12sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonSpock"
+        app:layout_constraintEnd_toStartOf="@+id/buttonSpock"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonSpock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:clickable="false"
+        android:onClick="ButtonSpockClick"
+        android:text="@string/spock"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonLagarto"
         app:layout_constraintTop_toBottomOf="@+id/PapelButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,4 +7,6 @@
     <string name="papel">PAPEL</string>
     <string name="tesoura">TESOURA</string>
     <string name="escolha_uma_op_o">Escolha uma opção</string>
+    <string name="lagarto">LAGARTO</string>
+    <string name="spock">SPOCK</string>
 </resources>

@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private Random dado= new Random();
 
     public enum Jogada{
-        PEDRA(0), PAPEL(1), TESOURA(2);
+        PEDRA(0), PAPEL(1), TESOURA(2),LAGARTO(3),SPOCK(4) ;
         private final int valor;
         Jogada(int valor){
             this.valor=valor;
@@ -34,9 +34,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public static final Resultado TABELA[] []= {
-            {Resultado.EMPATE},{Resultado.DERROTA},{Resultado.VITORIA},
-            {Resultado.VITORIA},{Resultado.EMPATE},{Resultado.DERROTA},
-            {Resultado.DERROTA},{Resultado.VITORIA},{Resultado.EMPATE},
+            {Resultado.EMPATE},{Resultado.DERROTA},{Resultado.VITORIA},{Resultado.VITORIA},{Resultado.DERROTA},
+            {Resultado.VITORIA},{Resultado.EMPATE},{Resultado.DERROTA},{Resultado.DERROTA},{Resultado.VITORIA},
+            {Resultado.DERROTA},{Resultado.VITORIA},{Resultado.EMPATE},{Resultado.VITORIA},{Resultado.DERROTA},
+            {Resultado.DERROTA},{Resultado.VITORIA},{Resultado.DERROTA},{Resultado.EMPATE},{Resultado.VITORIA},
+            {Resultado.VITORIA},{Resultado.DERROTA},{Resultado.VITORIA},{Resultado.DERROTA},{Resultado.EMPATE},
     };
 
     private Integer pontosCPU = 0;
@@ -45,6 +47,8 @@ public class MainActivity extends AppCompatActivity {
     private Button pedraButton;
     private Button papelButton;
     private Button tesouraButton;
+    private Button ButtonLargato;
+    private Button ButtonSpock;
 
     private ProgressBar progressBarCpu;
     private ProgressBar progressBarPlayer;
@@ -59,6 +63,8 @@ public class MainActivity extends AppCompatActivity {
         pedraButton= findViewById(R.id.PedraButton);
         papelButton= findViewById(R.id.PapelButton);
         tesouraButton= findViewById(R.id.TesouraButton);
+        ButtonLargato= findViewById(R.id.buttonLagarto);
+        ButtonSpock= findViewById(R.id.buttonSpock);
 
         progressBarPlayer=findViewById(R.id.progressBarPlayer);
         progressBarCpu= findViewById(R.id.progressBarCpu);
@@ -72,12 +78,12 @@ public class MainActivity extends AppCompatActivity {
     public void ButtonPapelClick(View view){
         rodada(Jogada.PAPEL);
     }
-    public void ButtonTesouraClick(View view){
-        rodada(Jogada.TESOURA);
-    }
+    public void ButtonTesouraClick(View view){rodada(Jogada.TESOURA);}
+    public void ButtonLagartoClick(View view){rodada(Jogada.LAGARTO);}
+    public void ButtonSpockClick(View view){rodada(Jogada.SPOCK);}
 
     public void rodada(Jogada jogada){
-        Jogada jogadaCpu= Jogada.values()[dado.nextInt(3)];
+        Jogada jogadaCpu= Jogada.values()[dado.nextInt(5)];
         switch (TABELA[jogada.valor][jogadaCpu.valor]){
             case VITORIA:
                 pontosPlayer += 3;
